@@ -36,13 +36,14 @@ class ServiceRegistry {
       return key;
     }
     this.services[key].timestamp = Math.floor(new Date() / 1000);
-    this.log.debug(`Updated services ${name}, version ${version} at ${ip}:${port}`);
+    this.log.debug(`Updated service ${name}, version ${version} at ${ip}:${port}`);
     return key;
   }
 
   unregister(name, version, ip, port) {
     const key = this.getKey(name, version, ip, port);
     delete this.services[key];
+    this.log.debug(`Unregistered service ${name}, version ${version} at ${ip}:${port}`);
     return key;
   }
 
