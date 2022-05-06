@@ -9,6 +9,12 @@
             "request": "launch",
             "name": "Service Registry",
             "program": "${workspaceFolder}/service-registry/bin/run"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Speakers Service",
+            "program": "${workspaceFolder}/speakers-service/bin/run"
         }
     ]
 }
