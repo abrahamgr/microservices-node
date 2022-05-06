@@ -15,6 +15,12 @@
             "request": "launch",
             "name": "Speakers Service",
             "program": "${workspaceFolder}/speakers-service/bin/run"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Conference App",
+            "program": "${workspaceFolder}/conference-app/server"
         }
     ]
 }

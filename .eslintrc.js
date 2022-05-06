@@ -22,7 +22,8 @@ module.exports = {
         "no-unused-vars": "off",
         "max-len": "off",
         "keyword-spacing": "off",
-        "no-tabs": "off"
+        "no-tabs": "off",
+        "tclass-methods-use-this": "off"
     },    
   };
   
