@@ -13,6 +13,12 @@
         {
             "type": "node",
             "request": "launch",
+            "name": "feedback Service",
+            "program": "${workspaceFolder}/feedback-service/bin/run"
+        },
+        {
+            "type": "node",
+            "request": "launch",
             "name": "Speakers Service",
             "program": "${workspaceFolder}/speakers-service/bin/run"
         },

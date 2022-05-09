@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 const axios = require("axios");
-
 const http = require('http');
 
 const config = require('../config')[process.env.NODE_ENV || 'development'];

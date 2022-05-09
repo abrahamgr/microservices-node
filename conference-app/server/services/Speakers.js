@@ -7,7 +7,7 @@ const util = require('util');
 
 const fsexists = util.promisify(fs.exists);
 
-const CircuitBreaker = require("../lib/CircuitBraker");
+const CircuitBreaker = require("../lib/CircuitBreaker");
 
 const circuitBreaker = new CircuitBreaker();
 

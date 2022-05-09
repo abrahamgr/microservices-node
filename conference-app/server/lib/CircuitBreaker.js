@@ -16,7 +16,7 @@ class CircuitBreaker {
         if(!this.canRequest(endpoint)) {
             return false;
         }
-        requestOptions.timout = this.requestTimeout * 1000;
+        requestOptions.timeout = this.requestTimeout * 1000;
         try {
             const response = await axios(requestOptions);
             this.onSuccess(endpoint);
