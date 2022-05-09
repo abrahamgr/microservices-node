@@ -23,7 +23,8 @@ module.exports = {
         "max-len": "off",
         "keyword-spacing": "off",
         "no-tabs": "off",
-        "tclass-methods-use-this": "off"
+        "tclass-methods-use-this": "off",
+        "no-console": "off"
     },    
   };
   

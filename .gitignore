@@ -105,3 +105,6 @@ dist
 
 # MAC file
 .DS_Store
+
+# Custom files
+_imagecache
