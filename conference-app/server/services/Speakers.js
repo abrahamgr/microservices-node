@@ -1,15 +1,21 @@
 /* eslint-disable class-methods-use-this */
-const fs = require('fs');
-const util = require('util');
 const axios = require("axios");
-
-// const readFile = util.promisify(fs.readFile);
 
 const serviceName = "speakers-service";
 
 class SpeakersService {
-  constructor(datafile) {
-    this.datafile = datafile;
+  constructor({ serviceRegistryURL, serviceVersion }) {
+    this.serviceRegistryURL = serviceRegistryURL;
+    this.serviceVersion = serviceVersion
+  }
+
+  async getImage(path) {
+    const { ip, port } = await this.getService(serviceName);
+    return this.callService({
+      method: "get",
+      responseType: "stream",
+      url: `http://${ip}:${port}/images/${path}`,
+    });
   }
 
   async getNames() {
@@ -66,7 +72,7 @@ class SpeakersService {
   }
 
   async getService(name) {
-    const response = await axios.get(`http://localhost:3000/find/${name}/1`);
+    const response = await axios.get(`${this.serviceRegistryURL}/find/${name}/${this.serviceVersion}`);
     return response.data;
   }
 }
